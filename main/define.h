@@ -1,0 +1,12 @@
+#ifndef __DEFINE_H_
+#define __DEFINE_H_
+
+#define WIFI_SSID	CONFIG_WIFI_SSID
+#define WIFI_PASS   CONFIG_WIFI_PASSWORD
+
+#define MQTT_URL    CONFIG_MQTT_URL
+
+#define FIRMWARE_VERSION	0.1
+#define UPDATE_JSON_URL		CONFIG_WEB_URL
+
+#endif

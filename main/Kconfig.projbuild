@@ -1,0 +1,130 @@
+menu "Device Lokaloo Configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+	default "myssid"
+	help
+		SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+	default "mypassword"
+	help
+		WiFi password (WPA or WPA2) for the example to use.
+
+config MQTT_URL
+    string "Url MQTT Server"
+	default "mqtt://user:pass@url.mqtt.com:1883"
+	help
+		url server mqtt.
+
+config MQTT_TOPIC_PUBLISH
+    string "MQTT TOPIC PUBLISH"
+	default "/lokaloo/deviceId/status"
+	help
+		MQTT TOPIC PUBLISH.
+
+config MQTT_TOPIC_SUBS
+    string "MQTT TOPIC SUBSCRIBE"
+	default "/lokaloo/deviceId/command"
+	help
+		MQTT TOPIC SUBSCRIBE.
+
+config DEVICE_ID
+    string "DEVICE_ID"
+	default "deviceId1"
+	help
+		device id.
+
+config WEB_URL
+	string "URL of server which hosts the json configuration"
+	default "https://your-url.com/dir/your-file.json"
+	help
+		URL of server which hosts the firmware image.
+		
+		Can be left blank if the network has no security set.
+		
+endmenu
+
+
+menu "esp-cam configuration"
+
+config XCLK_FREQ
+  int "XCLK Frequency"
+  default "20000000"
+  help
+      The XCLK Frequency in Herz.
+      
+menu "Pin Configuration"
+  config D0
+    int "D0"
+    default "5"
+  config D1
+    int "D1"
+    default "18"
+  config D2
+    int "D2"
+    default "19"
+  config D3
+    int "D3"
+    default "21"
+  config D4
+    int "D4"
+    default "36"
+  config D5
+    int "D5"
+    default "39"
+  config D6
+    int "D6"
+    default "34"
+  config D7
+    int "D7"
+    default "35"
+  config XCLK
+    int "XCLK"
+    default "0"
+  config PCLK
+    int "PCLK"
+    default "22"
+  config VSYNC
+    int "VSYNC"
+    default "25"
+  config HREF
+    int "HREF"
+    default "23"
+  config SDA
+    int "SDA"
+    default "26"
+  config SCL
+    int "SCL"
+    default "27"
+  config RESET
+    int "RESET"
+    default "32"
+endmenu
+	
+endmenu
+
+menu "FTP Client Configuration"
+
+	comment "for FTP Server Setting"
+
+	config FTP_SERVER
+		string "FTP Server"
+		default "myftpserver"
+		help
+			FTP Server host name or ip address for the example to use.
+
+	config FTP_USER
+		string "FTP User Name"
+		default "myftpuser"
+		help
+			FTP User name for the example to use.
+
+	config FTP_PASSWORD
+		string "FTP Password"
+		default "myftppass"
+		help
+			FTP Password for the example to use.
+
+endmenu
